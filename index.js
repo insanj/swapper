@@ -8,7 +8,8 @@ function swapper_singleplayerToMultiplayer(playerUUID, levelDatFile) {
      const uncompressedNBTData = pako.inflate(compressedNBTData);
      nbt.parse(uncompressedNBTData, function(error, data) {
          // grab the Player tag from the level dat (nested inside level.dat > Data > Player)
-         const levelDatPlayerTag = data.value['Data'].value['Player'];
+         let levelDatPlayerTag = data.value['Data'].value['Player'];
+         levelDatPlayerTag.name = playerUUID;
 
          // write new compound tag to the final file buffer
          const nbtArrayBuffer = nbt.writeUncompressed(levelDatPlayerTag);
