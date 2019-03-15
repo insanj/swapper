@@ -68,7 +68,7 @@
             <label id="single-to-multi-label" for="exampleFormControlFile1"><pre>level.dat</pre></label>
             <input id="single-to-multi-file" type="file" class="form-control-file" >
             <br/>
-            <button class="btn btn-outline-primary mt-3" type="submit">Swap!</button>
+            <button id="single-to-multi-submit" class="btn btn-outline-primary mt-3" type="submit">Swap!</button>
           </div>
         </form>
       </div>
@@ -86,14 +86,15 @@
             <br/>
             <label id="multi-to-single-level-label" for="multi-to-single-level-file"><pre>level.dat</pre></label>
             <input id="multi-to-single-level-file" type="file" class="form-control-file">
-            <button class="btn btn-outline-primary mt-5" type="submit">Swap!</button>
+            <button id="multi-to-single-submit" class="btn btn-outline-primary mt-5" type="submit">Swap!</button>
           </div>
         </form>
       </div>
     </div>
 </div>
 
-<script src="nbt.js"></script>
+<script src="vendor/pako.js"></script>
+<script src="vendor/nbt.js"></script>
 <script src="index.js"></script>
 
 </body>
