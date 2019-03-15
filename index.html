@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>swapper</title>
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css" >
+  <style>
+    pre {
+      margin: 0px;
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm" style="max-width: 340px;">
+      <p>
+        <h1><a href="https://github.com/insanj/swapper" style="color: inherit; text-decoration: underline;">swapper</a></h1>
+        <h5>🤝 webapp to transfer player profiles between minecraft saves</h5>
+      </p>
+
+      <br/>
+
+      <p>
+        <h3>How to Use</h3>
+      </p>
+
+      <p>
+        <h4>Singleplayer to Multiplayer</h4>
+
+        <ol>
+          <li>Input the player <pre>UUID</pre> that will be used when exporting the playerdata</li>
+          <li>Upload your <pre>level.dat</pre> from <pre>/saves/world_name/level.dat</pre></li>
+          <li><b>Swap!</b> Place the <pre>xxx-xxx-xxx-xxx.dat</pre> file in <pre>/saves/world_name/playerdata/<pre></li>
+        </ol
+      </p>
+
+      <p>
+        <h4>Multiplayer to Singleplayer</h4>
+
+        <ol>
+          <li>Upload the <pre>xxx-xxx-xxx-xxx.dat</pre> file from <pre>/saves/world_name/playerdata/</pre> that has the same name as <pre>UUID</pre> of the player you wish to import to singleplayer
+          <li>Upload the <pre>level.dat</pre> file from <pre>/saves/world_name/level.dat</pre>
+          <li><b>Swap!</b> Place the <pre>level.dat</pre> file in <pre>/saves/world_name/</pre>, replacing the old <pre>level.dat</pre>
+        </ol>
+      </p>
+
+      <p>
+        <h3>Authors</h3>
+
+        <p>
+          (c) 2019 Julian Weiss. <a href="https://github.com/insanj">github.com/insanj</a>
+        </p>
+      </p>
+    </div>
+
+    <!-- Singleplayer -> Multiplayer -->
+    <div class="col-sm">
+      <div class="card ml-3 mt-5 p-5">
+        <h4><center>Singleplayer to Multiplayer</center></h4>
+        <br/>
+        <form>
+          <div id="single-to-multi" class="form-group">
+            <label id="single-to-multi-text-input-label" for="single-to-multi-text-input"><pre>Player UUID</pre></label>
+            <input id="single-to-multi-text-input" type="text" class="form-control" placeholder="xxx-xxx-xxx-xxx">
+            <br/>
+            <label id="single-to-multi-label" for="exampleFormControlFile1"><pre>level.dat</pre></label>
+            <input id="single-to-multi-file" type="file" class="form-control-file" >
+            <br/>
+            <button class="btn btn-outline-primary mt-3" type="submit">Swap!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Multiplayer -> Singleplayer -->
+    <div class="col-sm">
+      <div class="card ml-1 mt-5 mr-2 p-5">
+        <h4><center>Multiplayer to Singleplayer</center></h4>
+        <br/>
+        <form>
+          <div id="multi-to-single" class="form-group">
+            <label id="multi-to-single-uuid-label" for="multi-to-single-uuid-file"><pre>UUID.dat</pre></label>
+            <input id="multi-to-single-uuid-file" type="file" class="form-control-file">
+            <br/>
+            <label id="multi-to-single-level-label" for="multi-to-single-level-file"><pre>level.dat</pre></label>
+            <input id="multi-to-single-level-file" type="file" class="form-control-file">
+            <button class="btn btn-outline-primary mt-5" type="submit">Swap!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+<script src="nbt.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

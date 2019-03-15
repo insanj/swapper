@@ -5,8 +5,8 @@
 
 ### Singleplayer -> Multiplayer
 
-1. Upload your `level.dat` from `/saves/world_name/level.dat`
-2. Input the player `UUID` that will be used when exporting the playerdata
+1. Input the player `UUID` that will be used when exporting the playerdata
+2. Upload your `level.dat` from `/saves/world_name/level.dat`
 3. **Swap!** Place the `xxx-xxx-xxx-xxx.dat` file in `/saves/world_name/playerdata/`
 
 ### Multiplayer -> Singleplayer
